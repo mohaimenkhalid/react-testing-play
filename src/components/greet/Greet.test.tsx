@@ -10,8 +10,15 @@ describe("Greet", ()=> {
         expect(textElement).toBeInTheDocument();
     })
 
-    test("should render heading", () => {
-        const textElement = screen.getByRole("heading");
+    test("should render heading & match", () => {
+        const heading = screen.getByRole("heading");
+        //expect(heading).toBeInTheDocument();
+        expect(heading).toHaveTextContent(/this is/i)
+    })
+
+    test("should render login button when name is not provided", () => {
+        render(<Greet name="" />)
+        const textElement = screen.getByText("login");
         expect(textElement).toBeInTheDocument();
     })
 })
