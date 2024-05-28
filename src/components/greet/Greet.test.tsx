@@ -9,4 +9,9 @@ describe("Greet", ()=> {
         const textElement = screen.getByText("Hello khalid");
         expect(textElement).toBeInTheDocument();
     })
+
+    test("should render heading", () => {
+        const textElement = screen.getByRole("heading");
+        expect(textElement).toBeInTheDocument();
+    })
 })
