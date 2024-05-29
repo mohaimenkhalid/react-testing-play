@@ -1,4 +1,4 @@
-type User = {name: string, age: number, isAdmin: boolean}
+type User = {name: string, age: number, isAdmin?: boolean}
 const User = ({user} : {user: User}) => {
     return (
         <>
@@ -7,7 +7,7 @@ const User = ({user} : {user: User}) => {
                 user.isAdmin && <button>Edit Profile</button>
             }
             <div>
-                <strong>Name:</strong> {user.name},
+                <strong>Name: </strong> {user.name} ,
                 <strong>Age:</strong> {user.age}
             </div>
         </>
