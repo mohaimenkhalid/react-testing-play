@@ -2,6 +2,7 @@ import './App.css'
 import Greet from "./components/greet/Greet.tsx";
 import User from "./components/user/User.tsx";
 import UserList from "./components/user-list/UserList.tsx";
+import ImageGallery from "./components/image/ImageGallery.tsx";
 
 function App() {
     type User = {
@@ -12,7 +13,7 @@ function App() {
         age: number,
         balance: number
     }
-    const user = {name: "khalid", age: 12, isAdmin: true }
+    const user = {name: "khalid", age: 12, isAdmin: true}
 
     const users: User[] = [
         {
@@ -32,19 +33,25 @@ function App() {
             balance: 700000,
         }
     ]
-  return (
-    <>
-      <Greet  name="mohaimen"/>
 
-        <hr />
+    const images = [`https://source.unsplash.com/random/300x200?sig=${Math.random()}`, `https://source.unsplash.com/random/300x200?sig=${Math.random()}`]
+    return (
+        <>
+            <Greet name="mohaimen"/>
 
-        <User user={user} />
+            <hr/>
 
-        <hr />
+            <User user={user}/>
 
-        <UserList users={users} />
-    </>
-  )
+            <hr/>
+
+            <UserList users={users}/>
+
+            <hr/>
+
+            <ImageGallery images={images}/>
+        </>
+    )
 }
 
 export default App
