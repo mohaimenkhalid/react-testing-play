@@ -7,7 +7,6 @@ type User = {
     balance: number
 }
 const UserList = ({ users } : { users: User[] }) => {
-
     if(users.length === 0) return <p>No users available.</p>
     return (
         <ul>
