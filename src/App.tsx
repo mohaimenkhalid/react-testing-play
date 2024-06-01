@@ -3,6 +3,7 @@ import Greet from "./components/greet/Greet.tsx";
 import User from "./components/user/User.tsx";
 import UserList from "./components/user-list/UserList.tsx";
 import ImageGallery from "./components/image/ImageGallery.tsx";
+import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions.tsx";
 
 function App() {
     type User = {
@@ -50,6 +51,10 @@ function App() {
             <hr/>
 
             <ImageGallery images={images}/>
+
+            <hr />
+
+            <TermsAndConditions />
         </>
     )
 }
