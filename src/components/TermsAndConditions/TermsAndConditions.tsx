@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const TermsAndConditions = () => {
-    const [isChecked, setIsChecked] = useState(true)
+    const [isChecked, setIsChecked] = useState(false)
     return (
         <div>
             <h1>Terms & Conditions</h1>
