@@ -4,7 +4,7 @@ import User from "./components/user/User.tsx";
 import UserList from "./components/user-list/UserList.tsx";
 import ImageGallery from "./components/image/ImageGallery.tsx";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions.tsx";
-import ExpendableText from "./components/ExpendableText.tsx";
+import ExpendableText from "./components/expanded-text/ExpendableText.tsx";
 
 function App() {
     type User = {
