@@ -17,16 +17,17 @@ describe("TermsAndCondition", () => {
         expect(checkbox).not.toBeChecked();
 
         const submitBtn = screen.getByRole("button")
-        expect(submitBtn).toBeInTheDocument();
         expect(submitBtn).toHaveTextContent('Submit')
         expect(submitBtn).toBeDisabled();
     });
 
     it('should enable button when user will check checkbox', async () => {
         render(<TermsAndConditions />)
+
         const checkbox = screen.getByRole("checkbox");
         const user = userEvent.setup();
         await user.click(checkbox);
+
         expect(checkbox).toBeChecked();
     });
 })
