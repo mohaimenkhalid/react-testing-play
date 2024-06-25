@@ -5,8 +5,9 @@ import UserList from "./components/user-list/UserList.tsx";
 import ImageGallery from "./components/image/ImageGallery.tsx";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions.tsx";
 import ExpendableText from "./components/expanded-text/ExpendableText.tsx";
-import {Counter} from "./components/counter/counter.tsx";
+import {Counter} from "./components/mocking/counter/counter.tsx";
 import {useCounter} from "./hooks/useCounter.ts";
+import Users from "./components/mocking/users/users.tsx";
 
 function App() {
     type User = {
@@ -71,6 +72,10 @@ function App() {
             <hr />
 
             <Counter count={count} handleIncrement={increment} handleDecrement={decrement} />
+
+            <hr />
+
+            <Users />
         </>
     )
 }
